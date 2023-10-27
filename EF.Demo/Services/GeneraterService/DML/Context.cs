@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace EF.Demo.GeneraterService.DML
+namespace EF.Demo.Services.GeneraterService.DML
 {
     public class Context
     {
@@ -21,13 +21,13 @@ namespace EF.Demo.GeneraterService.DML
 
             foreach (var property in properties)
             {
-                if(property.PropertyType != typeof(DateTime))
+                if (property.PropertyType != typeof(DateTime))
                 {
                     query.Append(property.GetValue(@object) + ",");
                 }
                 else
                 {
-                    var date = (DateTime)(property.GetValue(@object));
+                    var date = (DateTime)property.GetValue(@object);
                     var dateString = date.ToString("MM/dd/yyyy HH:mm:ss");
                     query.Append(dateString + ",");
                 }

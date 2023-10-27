@@ -1,4 +1,4 @@
-﻿namespace EF.Demo.GeneraterService.DDL;
+﻿namespace EF.Demo.Services.GeneraterService.DDL;
 
 public class Database
 {
